@@ -69,11 +69,11 @@ function addNewItem(input) {
   const l = JSON.parse(localStorage.getItem(links[activeLink])) || [];
 
   if (input.value.startsWith("https://")) {
-    l.push(input.value);
+    l.push(input.value.replace("https://", ""));
   } else if (input.value.startsWith("www.")) {
-    l.push(`https://${input.value}`);
+    l.push(`${input.value}`);
   } else {
-    l.push(`https://www.${input.value}`);
+    l.push(`www.${input.value}`);
   }
 
   localStorage.setItem(links[activeLink], JSON.stringify(l));

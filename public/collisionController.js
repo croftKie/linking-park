@@ -1,52 +1,17 @@
-import { links } from "./linkManager.js";
-export function collisionController(player) {
-  onCollide("player", "house1", () => {
+export function collisionController() {
+  onCollide("player", "item", (p, h) => {
+    const name = Object.keys(h.inspect())[6];
     const loadingText = add([
-      text("Press E to open your Work Tabs", {
+      text(`Press E to open your ${name} Tabs`, {
         size: 10,
       }),
       pos(width() / 2, height() - 16),
       anchor("center"),
     ]);
     const click = onKeyPress("e", () => {
-      onClick(0, loadingText, "Work");
+      onClick(name, loadingText);
     });
-    onCollideEnd("player", "house1", () => {
-      loadingText.destroy();
-      click.cancel();
-    });
-  });
-
-  onCollide("player", "house2", () => {
-    const loadingText = add([
-      text("Press E to open your Wake Tabs", {
-        size: 10,
-      }),
-      pos(width() / 2, height() - 16),
-      anchor("center"),
-    ]);
-    const click = onKeyPress("e", () => {
-      onClick(1, loadingText, "Wake");
-    });
-    onCollideEnd("player", "house2", () => {
-      console.log("fired");
-      loadingText.destroy();
-      click.cancel();
-    });
-  });
-
-  onCollide("player", "market1", () => {
-    const loadingText = add([
-      text("Press E to open your Sleep Tabs", {
-        size: 10,
-      }),
-      pos(width() / 2, height() - 16),
-      anchor("center"),
-    ]);
-    const click = onKeyPress("e", () => {
-      onClick(2, loadingText, "Sleep");
-    });
-    onCollideEnd("player", "market1", () => {
+    onCollideEnd("player", "item", () => {
       loadingText.destroy();
       click.cancel();
     });
@@ -55,8 +20,8 @@ export function collisionController(player) {
 
 // COllISION UTILITY FUNCTIONS
 
-function fetchLinks(activeLink) {
-  const linksList = JSON.parse(localStorage.getItem(`${links[activeLink]}`));
+function fetchLinks(activeFolder) {
+  const linksList = JSON.parse(localStorage.getItem(`${activeFolder}`));
   return linksList;
 }
 
@@ -67,9 +32,9 @@ function openWindows(linksList) {
   });
 }
 
-function errorText() {
+function errorText(activeFolder) {
   const errorText = add([
-    text(`You have no tabs in ${mode} Mode yet`, {
+    text(`You have no tabs in ${activeFolder} yet`, {
       size: 10,
     }),
     pos(width() / 2, height() - 16),
@@ -80,12 +45,13 @@ function errorText() {
   }, 2000);
 }
 
-function onClick(number, loadingText, mode) {
-  const linksList = fetchLinks(number);
+function onClick(activeFolder, loadingText) {
+  const linksList = fetchLinks(activeFolder);
   if (linksList && linksList.length > 0) {
     openWindows(linksList);
     loadingText.destroy();
   } else {
-    errorText();
+    loadingText.destroy();
+    errorText(activeFolder);
   }
 }

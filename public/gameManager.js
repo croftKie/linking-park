@@ -17,7 +17,7 @@ kaboom({
 assetLoader();
 
 scene("town", () => {
-  // const groundTiles = addLevel(levels[0], levelOptions[0]);
+  const groundTiles = addLevel(levels[0], levelOptions[0]);
   locationLoader();
   decorationLoader();
 

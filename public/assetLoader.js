@@ -51,4 +51,8 @@ export function assetLoader() {
   loadSprite("villa", "./assets/locations/villa.png");
   loadSprite("treehouse", "./assets/locations/treehouse.png");
   loadSprite("lemon", "./assets/locations/lemon.png");
+
+  loadSprite("grass-plain", "./assets/tileset/grass-plain.png");
+  loadSprite("grass-long", "./assets/tileset/grass-long.png");
+  loadSprite("path", "./assets/tileset/path.png");
 }

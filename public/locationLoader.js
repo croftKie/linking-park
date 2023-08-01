@@ -5,7 +5,8 @@ export function locationLoader() {
     scale(0.2),
     pos(250, 100),
     body({ isStatic: true }),
-    "house1",
+    "item",
+    "Folder One",
   ]);
   const house2 = add([
     sprite("house2"),
@@ -13,7 +14,8 @@ export function locationLoader() {
     scale(0.2),
     pos(110, 10),
     body({ isStatic: true }),
-    "house2",
+    "item",
+    "Folder Two",
   ]);
   const villa = add([
     sprite("villa"),
@@ -21,7 +23,8 @@ export function locationLoader() {
     scale(0.15),
     pos(20, 80),
     body({ isStatic: true }),
-    "villa",
+    "item",
+    "Folder Three",
   ]);
   const treehouse = add([
     sprite("treehouse"),
@@ -29,7 +32,8 @@ export function locationLoader() {
     scale(0.15),
     pos(200, 0),
     body({ isStatic: true }),
-    "treehouse",
+    "item",
+    "Folder Four",
   ]);
   const lemon = add([
     sprite("lemon"),
@@ -37,6 +41,7 @@ export function locationLoader() {
     scale(0.2),
     pos(90, 30),
     body({ isStatic: true }),
-    "lemon",
+    "item",
+    "Folder Five",
   ]);
 }
