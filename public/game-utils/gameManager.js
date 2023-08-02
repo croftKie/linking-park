@@ -10,7 +10,7 @@ import { decorationLoader } from "./decorationLoader.js";
 kaboom({
   width: 600,
   height: 400,
-  scale: 2,
+  scale: 1.75,
   canvas: document.querySelector("canvas"),
 });
 
