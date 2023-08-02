@@ -7,6 +7,8 @@ import { collisionController } from "./collisionController.js";
 import { locationLoader } from "./locationLoader.js";
 import { decorationLoader } from "./decorationLoader.js";
 
+console.log(document.window);
+
 kaboom({
   width: 600,
   height: 400,
