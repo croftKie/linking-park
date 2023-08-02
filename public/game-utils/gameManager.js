@@ -8,9 +8,9 @@ import { locationLoader } from "./locationLoader.js";
 import { decorationLoader } from "./decorationLoader.js";
 
 kaboom({
-  width: 300,
-  height: 190,
-  scale: 4,
+  width: 600,
+  height: 400,
+  scale: 2,
   canvas: document.querySelector("canvas"),
 });
 

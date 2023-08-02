@@ -5,7 +5,7 @@ export const charLoader = () => {
     area({ shape: new Rect(vec2(0), 16, 16) }),
     anchor("bot"),
     body(),
-    scale(0.8),
+    scale(1.2),
     "player",
   ]);
 };

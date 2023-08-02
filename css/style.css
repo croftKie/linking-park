@@ -42,3 +42,10 @@ form>.form-floating{
 form>button{
   flex: 1;
 }
+.blue-title{
+  color: #0d6efd;
+}
+
+.lead{
+  text-align: justify;
+}

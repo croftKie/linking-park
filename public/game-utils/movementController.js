@@ -7,16 +7,22 @@ export function movementController(player) {
   });
   onKeyDown("s", () => {
     player.move(0, 75);
+  });
+  onKeyPress("s", () => {
     player.play("run_down");
   });
   onKeyDown("a", () => {
     player.move(-75, 0);
     player.flipX = true;
+  });
+  onKeyPress("a", () => {
     player.play("run_side");
   });
   onKeyDown("d", () => {
     player.move(75, 0);
     player.flipX = false;
+  });
+  onKeyPress("d", () => {
     player.play("run_side");
   });
 }

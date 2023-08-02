@@ -41,6 +41,7 @@ export function assetLoader() {
           from: 8,
           to: 9,
           speed: 4,
+          loop: true,
         },
       },
     },
