@@ -1,0 +1,44 @@
+.content {
+    height: 80vh;
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: center;
+  }
+  #container > .game-content {
+    display: flex;
+    justify-content: center;
+  }
+  #container > .game-content > canvas {
+    border: 10px solid black;
+    border-radius: 20px;
+  }
+  .side-bar-nav {
+    border-radius: 10px;
+    background-color: rgb(45, 45, 45);
+  }
+  .side-bar-nav > ul {
+    gap: 30px;
+  }
+  .links,
+  .tutorial {
+    flex: 1;
+    padding: 0 20px 0 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+.home-nav{
+  border-bottom: 5px solid black;
+  margin-bottom: 30px;
+}
+
+form{
+  display: flex;
+}
+form>.form-floating{
+  flex: 2;
+}
+form>button{
+  flex: 1;
+}

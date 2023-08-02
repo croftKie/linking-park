@@ -1,4 +1,4 @@
-import { links } from "../linkManager.js";
+import { links } from "../game-utils/linkManager.js";
 const input = document.querySelector(".site-input");
 const button = document.getElementById("button-submit");
 const linkNav = document.querySelector(".link-nav");
@@ -32,15 +32,15 @@ function drawListItems(activeLink) {
 
       card.innerHTML = `
         <img
-          src="https://github.com/twbs.png"
+          src="../public/images/pointer.svg"
           alt="twbs"
-          class="rounded-circle flex-shrink-0"
+          class="flex-shrink-0"
           width="32"
           height="32" />
         <div class="d-flex gap-2 w-100 justify-content-between">
           <div>
             <h6 class="mb-0">${item}</h6>
-            <p class="mb-0 opacity-75">added: ${new Date()}</p>
+            <p class="mb-0 opacity-75"><b>added:</b> ${new Date()}</p>
           </div>
         </div>`;
       list.appendChild(card);
