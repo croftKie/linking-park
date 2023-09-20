@@ -1,5 +1,7 @@
 import React from "react";
-
+import delImg from "../assets/delete.png";
+import left from "../assets/left.png";
+import link_open from "../assets/link_open.png";
 function User() {
   return (
     <div className="account">
@@ -9,7 +11,7 @@ function User() {
         </div>
         <div className="settings">
           <div className="setting-card">
-            <img src="" alt="" />
+            <img src={link_open} alt="" />
             <p>Leave Feedback on GitHub</p>
           </div>
           <div className="setting-card">
@@ -34,16 +36,19 @@ function User() {
         </div>
         <div className="profile">
           <div className="setting-card">
-            <p>User Email</p>
+            <img src={left} alt="" />
+            <p>Change your Email</p>
           </div>
           <div className="setting-card">
+            <img src={left} alt="" />
             <p className="name">Change your Password</p>
-            <img src="" alt="" />
           </div>
           <div className="setting-card">
+            <img src={left} alt="" />
             <p className="name">Sign Out</p>
           </div>
           <div className="setting-card">
+            <img src={delImg} alt="" />
             <p className="name">Delete Your Account</p>
           </div>
         </div>

@@ -172,6 +172,12 @@
   /* The slider */
   /* Rounded sliders */
 }
+.account .settings-container .settings .setting-card p {
+  margin: 0;
+}
+.account .settings-container .settings .setting-card img {
+  height: 20px;
+}
 .account .settings-container .settings .setting-card .switch {
   position: relative;
   display: inline-block;
@@ -251,4 +257,10 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid grey;
+}
+.account .user-container .profile .setting-card p {
+  margin: 0;
+}
+.account .user-container .profile .setting-card img {
+  height: 25px;
 }/*# sourceMappingURL=App.css.map */

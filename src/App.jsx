@@ -45,6 +45,7 @@ function App() {
     main(window.innerHeight, window.innerWidth, openLinks);
   }, []);
 
+  console.log(window.innerHeight, window.innerWidth);
   return (
     <>
       <div id="container">

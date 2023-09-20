@@ -5,7 +5,6 @@ import { charLoader } from "./charLoader.js";
 import { movementController } from "./movementController.js";
 import { collisionController } from "./collisionController.js";
 import { locationLoader } from "./locationLoader.js";
-import { decorationLoader } from "./decorationLoader.js";
 
 export function main(height, width, openLinks) {
   kaboom({
@@ -20,9 +19,18 @@ export function main(height, width, openLinks) {
   scene("town", () => {
     setBackground(Color.fromHex("#509B66"));
     const groundTiles = addLevel(levels[0], levelOptions[0]);
-    locationLoader(width, height);
-    // decorationLoader();
     const player = charLoader();
+    const TreeBoundrayLayer = addLevel(levels[1], levelOptions[1]);
+    locationLoader(width, height);
+    const innerTreeLayer = addLevel(levels[2], levelOptions[1]);
+
+    if (true) {
+      const music = play("forest_song", {
+        volume: 0.8,
+        loop: true,
+      });
+    }
+
     movementController(player);
     collisionController(player, openLinks);
   });

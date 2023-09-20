@@ -1,75 +1,87 @@
+import { SCALE_MULTIPLIER } from "../utils/calculations";
+
 export function locationLoader(width, height) {
   const blue_medium_shadow = add([
-    pos(width * 0.81, height * 0.78),
-    rect(205, 40),
+    pos(1490 * SCALE_MULTIPLIER(), 710 * SCALE_MULTIPLIER()),
+    anchor("bot"),
+    rect(205 * SCALE_MULTIPLIER(), 40 * SCALE_MULTIPLIER()),
     color(30, 30, 30),
     opacity(0.1),
   ]);
   const blue_medium = add([
     sprite("blue_medium"),
-    area(),
-    scale(2),
-    pos(width * 0.81, height * 0.65),
+    area({ scale: [0.9, 0.35] }),
+    anchor("bot"),
+    scale(2 * SCALE_MULTIPLIER()),
+    pos(1490 * SCALE_MULTIPLIER(), 710 * SCALE_MULTIPLIER()),
     body({ isStatic: true }),
     "item",
     "blue_medium",
   ]);
   const brown_large = add([
     sprite("brown_large"),
-    area(),
-    scale(2.5),
-    pos(width * 0.03, height * 0.53),
+    area({ scale: [0.9, 0.55] }),
+    anchor("bot"),
+    scale(2.5 * SCALE_MULTIPLIER()),
+    pos(220 * SCALE_MULTIPLIER(), 750 * SCALE_MULTIPLIER()),
     body({ isStatic: true }),
     "item",
     "brown_large",
   ]);
   const brown_small_shadow = add([
-    pos(width * 0.08, height * 0.16),
+    pos(210 * SCALE_MULTIPLIER(), 155 * SCALE_MULTIPLIER()),
+    anchor("bot"),
     rect(170, 45),
     color(30, 30, 30),
     opacity(0.1),
   ]);
   const brown_small = add([
     sprite("brown_small"),
-    area(),
-    scale(2),
-    pos(width * 0.08, height * 0.04),
+    area({ scale: [0.9, 0.35] }),
+    anchor("bot"),
+    scale(2 * SCALE_MULTIPLIER()),
+    pos(210 * SCALE_MULTIPLIER(), 155 * SCALE_MULTIPLIER()),
     body({ isStatic: true }),
     "item",
     "brown_small",
   ]);
   const glass_house_shadow = add([
-    pos(width * 0.395, height * 0.19),
+    pos(760 * SCALE_MULTIPLIER(), 190 * SCALE_MULTIPLIER()),
+    anchor("bot"),
     rect(220, 65),
     color(30, 30, 30),
     opacity(0.1),
   ]);
   const glass_house = add([
     sprite("glass_house"),
-    area(),
-    scale(2),
-    pos(width * 0.395, height * 0.1),
+    area({ scale: [0.9, 0.35] }),
+    anchor("bot"),
+    scale(2 * SCALE_MULTIPLIER()),
+    pos(760 * SCALE_MULTIPLIER(), 190 * SCALE_MULTIPLIER()),
     body({ isStatic: true }),
     "item",
     "glass_house",
   ]);
   const green_small_shadow = add([
-    pos(width * 0.41, height * 0.55),
+    pos(740 * SCALE_MULTIPLIER(), 520 * SCALE_MULTIPLIER()),
+    anchor("bot"),
     rect(120, 65),
     color(30, 30, 30),
     opacity(0.1),
   ]);
   const green_small = add([
     sprite("green_small"),
-    area(),
-    scale(2),
-    pos(700, 440),
+    area({ scale: [0.9, 0.35] }),
+    anchor("bot"),
+    scale(2 * SCALE_MULTIPLIER()),
+    pos(740 * SCALE_MULTIPLIER(), 520 * SCALE_MULTIPLIER()),
     body({ isStatic: true }),
     "item",
     "green_small",
   ]);
   const rainbow_shadow = add([
-    pos(width * 0.865, height * 0.5),
+    pos(1500 * SCALE_MULTIPLIER(), 480 * SCALE_MULTIPLIER()),
+    anchor("bot"),
     rect(120, 65),
     color(30, 30, 30),
     opacity(0.1),
@@ -77,90 +89,61 @@ export function locationLoader(width, height) {
   ]);
   const rainbow = add([
     sprite("rainbow"),
-    area(),
-    scale(1.5),
-    pos(width * 0.865, height * 0.44),
+    area({ scale: [0.9, 0.35] }),
+    anchor("bot"),
+    scale(1.5 * SCALE_MULTIPLIER()),
+    pos(1500 * SCALE_MULTIPLIER(), 480 * SCALE_MULTIPLIER()),
     body({ isStatic: true }),
     "item",
     "rainbow",
   ]);
   const windmill_shadow = add([
-    pos(width * 0.915, height * 0.2),
+    pos(1582 * SCALE_MULTIPLIER(), 240 * SCALE_MULTIPLIER()),
+    anchor("bot"),
     rect(100, 65),
     color(30, 30, 30),
     opacity(0.1),
-    area(),
   ]);
   const windmill = add([
     sprite("windmill"),
-    area(),
-    scale(2),
-    pos(width * 0.89, height * 0.025),
+    area({ scale: [0.6, 0.35] }),
+    anchor("bot"),
+    scale(2 * SCALE_MULTIPLIER()),
+    pos(1582 * SCALE_MULTIPLIER(), 240 * SCALE_MULTIPLIER()),
     body({ isStatic: true }),
     "item",
     "windmill",
   ]);
   const lamp_one = add([
     sprite("lamp"),
-    area(),
-    scale(2),
-    pos(width * 0.2975, height * 0.28),
+    area({ scale: [0.9, 0.2] }),
+    anchor("bot"),
+    scale(2 * SCALE_MULTIPLIER()),
+    pos(500 * SCALE_MULTIPLIER(), 300 * SCALE_MULTIPLIER()),
     body({ isStatic: true }),
   ]);
   const lamp_two = add([
     sprite("lamp"),
-    area(),
-    scale(2),
-    pos(width * 0.2975, height * 0.45),
+    area({ scale: [0.9, 0.2] }),
+    anchor("bot"),
+    scale(2 * SCALE_MULTIPLIER()),
+    pos(500 * SCALE_MULTIPLIER(), 400 * SCALE_MULTIPLIER()),
     body({ isStatic: true }),
   ]);
   const lamp_three = add([
     sprite("lamp"),
-    area(),
-    scale(2),
-    pos(width * 0.2975, height * 0.69),
+    area({ scale: [0.9, 0.2] }),
+    anchor("bot"),
+    scale(2 * SCALE_MULTIPLIER()),
+    pos(500 * SCALE_MULTIPLIER(), 680 * SCALE_MULTIPLIER()),
     body({ isStatic: true }),
   ]);
   const lamp_four = add([
     sprite("lamp"),
-    area(),
-    scale(2),
-    pos(width * 0.44, height * 0.85),
-    body({ isStatic: true }),
-  ]);
-  const tree_one = add([
-    sprite("tree_round"),
-    area(),
-    scale(3),
-    pos(width * 0.81, height * 0.455),
-    body({ isStatic: true }),
-  ]);
-  const tree_two = add([
-    sprite("tree_round"),
-    area(),
-    scale(3),
-    pos(width * 0.175, height * 0.09),
-    body({ isStatic: true }),
-  ]);
-  const tree_three = add([
-    sprite("tree_round"),
-    area(),
-    scale(3),
-    pos(width * 0.5, height * 0.7),
-    body({ isStatic: true }),
-  ]);
-  const tree_four = add([
-    sprite("tree_point"),
-    area(),
-    scale(3),
-    pos(width * 0.15, height * 0.7),
-    body({ isStatic: true }),
-  ]);
-  const tree_five = add([
-    sprite("tree_point"),
-    area(),
-    scale(3),
-    pos(width * 0.04, height * 0.7),
+    area({ scale: [0.9, 0.2] }),
+    anchor("bot"),
+    scale(2 * SCALE_MULTIPLIER()),
+    pos(750 * SCALE_MULTIPLIER(), 780 * SCALE_MULTIPLIER()),
     body({ isStatic: true }),
   ]);
 }

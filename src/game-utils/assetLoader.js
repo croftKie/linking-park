@@ -109,56 +109,6 @@ export function assetLoader() {
       height: 16,
     },
   });
-  loadSpriteAtlas("../public/fence.png", {
-    upper_left: {
-      x: 0,
-      y: 0,
-      width: 16,
-      height: 16,
-    },
-    upper_mid: {
-      x: 16,
-      y: 0,
-      width: 16,
-      height: 16,
-    },
-    upper_right: {
-      x: 32,
-      y: 0,
-      width: 16,
-      height: 16,
-    },
-    lower_left: {
-      x: 0,
-      y: 32,
-      width: 16,
-      height: 16,
-    },
-    lower_mid: {
-      x: 16,
-      y: 32,
-      width: 16,
-      height: 16,
-    },
-    lower_right: {
-      x: 32,
-      y: 32,
-      width: 16,
-      height: 16,
-    },
-    mid_left: {
-      x: 0,
-      y: 16,
-      width: 16,
-      height: 16,
-    },
-    mid_right: {
-      x: 32,
-      y: 16,
-      width: 16,
-      height: 16,
-    },
-  });
   loadSpriteAtlas("../public/chars.png", {
     hero: {
       x: 0,
@@ -176,4 +126,38 @@ export function assetLoader() {
       },
     },
   });
+  loadSpriteAtlas("../public/flowers_rocks.png", {
+    tree_stump: {
+      x: 16,
+      y: 0,
+      width: 16,
+      height: 16,
+    },
+    rock_one: {
+      x: 16 * 4,
+      y: 16 * 3,
+      width: 16,
+      height: 16,
+    },
+    purple_flower: {
+      x: 16 * 4,
+      y: 16 * 4,
+      width: 16,
+      height: 16,
+    },
+    blue_flower: {
+      x: 16 * 5,
+      y: 16 * 5,
+      width: 16,
+      height: 16,
+    },
+    bush: {
+      x: 16,
+      y: 16,
+      width: 16,
+      height: 16,
+    },
+  });
+
+  loadSound("forest_song", "../public/forest_song.mp3");
 }
