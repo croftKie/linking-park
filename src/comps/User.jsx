@@ -14,11 +14,17 @@ function User() {
           </div>
           <div className="setting-card">
             <p className="name">Toggle Dark Mode</p>
-            <input type="checkbox" name="" id="" />
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
           </div>
           <div className="setting-card">
             <p className="name">Toggle Music</p>
-            <input type="checkbox" name="" id="" />
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>{" "}
           </div>
         </div>
       </div>

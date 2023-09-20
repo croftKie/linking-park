@@ -3,7 +3,6 @@ import "./css/App.css";
 import { main } from "./game-utils/gameManager";
 import Nav from "./comps/Nav";
 import Link from "./comps/Link";
-import Settings from "./comps/Settings";
 import User from "./comps/User";
 import {
   linkSelector,
