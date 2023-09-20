@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-container {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  .nav-inner-container-right {
+    width: 10%;
+    display: flex;
+    gap: 5%;
+    padding: 1%;
+    button {
+      height: 40px;
+      width: 40px;
+      border-radius: 25%;
+      border: none;
+      outline: none;
+      img {
+        height: 30px;
+      }
+    }
+  }
+}
+
+.link-container {
+  position: absolute;
+  width: 40vw;
+  height: 80vh;
+  left: 59vw;
+  top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3%;
+
+  .links {
+    background-color: white;
+    box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    flex: 6;
+    display: flex;
+    width: 87%;
+    .link-nav {
+      border-radius: 5px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 5%;
+      height: 100%;
+      img {
+        padding: 1%;
+        height: 40px;
+        background-color: pink;
+        border-radius: 5px 5px 0 0;
+      }
+    }
+    .link-cards {
+      padding: 5%;
+      display: flex;
+      flex-direction: column;
+      gap: 1%;
+      .card {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 6fr 1fr;
+        grid-template-rows: 1fr;
+        padding-left: 2%;
+        .name {
+          grid-column: 1/2;
+          grid-row: 1/2;
+          align-self: center;
+          margin-bottom: 0;
+        }
+        .changes {
+          grid-column: 2/3;
+          grid-row: 1/4;
+          display: flex;
+          justify-content: space-around;
+          button {
+            height: 40px;
+            width: 40px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            img {
+              height: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .submit-new {
+    background-color: white;
+    box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: 70%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: -45px;
+    input {
+      flex: 3;
+      height: 100%;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+      border: none;
+    }
+    button {
+      flex: 1;
+      height: 100%;
+      outline: none;
+      border: none;
+      border-radius: 0 5px 5px 0;
+    }
+  }
+}
+
+.account {
+  position: absolute;
+  width: 20vw;
+  height: 80vh;
+  left: 76.5vw;
+  top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .settings-container {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .settings-container-nav {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
+      width: 80%;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      top: 20px;
+    }
+    .settings {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      padding: 5%;
+      display: flex;
+      flex-direction: column;
+      .setting-card {
+        padding: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid grey;
+      }
+    }
+  }
+  .user-container {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .user-container-nav {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
+      width: 80%;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      top: 20px;
+    }
+    .profile {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      padding: 5% 0 5% 0;
+      display: flex;
+      flex-direction: column;
+      .setting-card {
+        padding: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid grey;
+      }
+    }
+  }
+}
