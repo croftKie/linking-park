@@ -26,7 +26,7 @@ export function main(height, width, openLinks) {
 
     if (true) {
       const music = play("forest_song", {
-        volume: 0.8,
+        volume: 0.2,
         loop: true,
       });
     }

@@ -10,6 +10,7 @@ export function assetLoader() {
   loadSprite("lamp", "../public/lamp.png");
   loadSprite("tree_point", "../public/tree_point.png");
   loadSprite("tree_round", "../public/tree_round.png");
+  loadSprite("boy", "../public/Boy.png");
 
   loadSpriteAtlas("../public/pathway.png", {
     left_path: {
