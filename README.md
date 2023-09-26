@@ -32,5 +32,3 @@ Key Points:
 - mySQL for database management and queries.
 
 If you have any tools or additions you would like to see included in LinkingPark, let me know via the links above! :)
-
-> > > > > > > d153fb526384c9d832426770c69fc9146030e8b1
