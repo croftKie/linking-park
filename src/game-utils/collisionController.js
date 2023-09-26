@@ -1,6 +1,6 @@
 export function collisionController(player, openLinks) {
   onCollide("player", "item", (p, h) => {
-    const name = Object.keys(h.inspect())[6];
+    const name = Object.keys(h.inspect())[7];
     const background = add([
       pos(width() / 2, height() - 80),
       anchor("center"),

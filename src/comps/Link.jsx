@@ -21,6 +21,7 @@ function Link({ links }) {
     } else {
       await addNewLink(obj);
       const data = await fetchAllLinkData(localStorage.getItem("data"));
+      console.log(data);
       dispatch(setLinksFromDatabase(data));
     }
   };

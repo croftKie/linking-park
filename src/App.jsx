@@ -28,7 +28,6 @@ function App() {
     setActiveMode(mode);
   };
   const openLinks = (currentPoint) => {
-    console.log(links);
     links.forEach((e) => {
       if (e.point_of_interest === currentPoint) {
         window.open(e.url);
