@@ -10,10 +10,12 @@ import {
 } from "./store/features/linkFeature";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchAllLinkData } from "./utils/fetchData";
+import Home from "./comps/Home";
 
 function App() {
   // variables
   const [activeMode, setActiveMode] = useState(0);
+  const [parkMode, setParkMode] = useState(false);
   const links = useSelector(linkSelector);
   const dispatch = useDispatch();
 
@@ -34,33 +36,36 @@ function App() {
     });
   };
   const fetch = async () => {
-    const data = await fetchAllLinkData(1);
+    const data = await fetchAllLinkData(localStorage.getItem("data"));
     dispatch(setLinksFromDatabase(data));
+  };
+  const startGame = () => {
+    main(window.innerHeight, window.innerWidth, openLinks);
   };
 
   useEffect(() => {
     fetch();
   }, []);
-  useEffect(() => {
-    main(window.innerHeight, window.innerWidth, openLinks);
-  }, []);
 
-  console.log(window.innerHeight, window.innerWidth);
   return (
     <>
-      <div id="container">
-        <Nav setMode={setMode} />
-        {activeMode === 1 ? (
-          <Link links={links} />
-        ) : activeMode === 2 ? (
-          <User />
-        ) : (
-          <></>
-        )}
-        <div className="game-content">
-          <canvas></canvas>
+      {parkMode ? (
+        <div id="container">
+          <div className="game-content">
+            <canvas></canvas>
+          </div>
+          <Nav setMode={setMode} />
+          {activeMode === 1 ? (
+            <Link links={links} />
+          ) : activeMode === 2 ? (
+            <User />
+          ) : (
+            <></>
+          )}
         </div>
-      </div>
+      ) : (
+        <Home startGame={startGame} setParkMode={setParkMode} />
+      )}
     </>
   );
 }

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow: hidden;
+}
+
 .nav-container {
   position: absolute;
   display: flex;
@@ -22,6 +26,10 @@
   border-radius: 25%;
   border: none;
   outline: none;
+  background-color: #37e484;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .nav-container .nav-inner-container-right button img {
   height: 30px;
@@ -32,41 +40,55 @@
   width: 40vw;
   height: 80vh;
   left: 59vw;
-  top: 10vh;
+  top: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3%;
+  box-sizing: border-box;
+}
+.link-container .header {
+  background-color: #37e484;
+  width: 60%;
+  box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 5%;
 }
 .link-container .links {
+  padding-top: 5%;
+  margin-bottom: 5%;
   background-color: white;
   box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   flex: 6;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
   width: 87%;
 }
 .link-container .links .link-nav {
   border-radius: 5px;
-  flex: 1;
+  grid-column: 1/2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-around;
   gap: 5%;
   height: 100%;
 }
 .link-container .links .link-nav img {
   padding: 1%;
   height: 40px;
-  background-color: pink;
-  border-radius: 5px 5px 0 0;
 }
 .link-container .links .link-cards {
+  grid-column: 2/3;
   padding: 5%;
   display: flex;
   flex-direction: column;
   gap: 1%;
+  overflow: scroll;
 }
 .link-container .links .link-cards .card {
   width: 100%;
@@ -74,6 +96,7 @@
   grid-template-columns: 6fr 1fr;
   grid-template-rows: 1fr;
   padding-left: 2%;
+  border-bottom: 2px solid gray;
 }
 .link-container .links .link-cards .card .name {
   grid-column: 1/2;
@@ -115,6 +138,8 @@
   border-radius: 5px 0 0 5px;
   outline: none;
   border: none;
+  padding: 10px;
+  font-size: 1rem;
 }
 .link-container .submit-new button {
   flex: 1;
@@ -122,6 +147,7 @@
   outline: none;
   border: none;
   border-radius: 0 5px 5px 0;
+  background-color: #37e484;
 }
 
 .account {
@@ -129,7 +155,7 @@
   width: 20vw;
   height: 80vh;
   left: 76.5vw;
-  top: 10vh;
+  top: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -142,7 +168,7 @@
   align-items: center;
 }
 .account .settings-container .settings-container-nav {
-  background-color: white;
+  background-color: #37e484;
   border-radius: 5px;
   box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
   width: 80%;
@@ -232,7 +258,7 @@
   align-items: center;
 }
 .account .user-container .user-container-nav {
-  background-color: white;
+  background-color: #37e484;
   border-radius: 5px;
   box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
   width: 80%;

@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow: visible;
+}
+
+@mixin button {
+  height: 100%;
+  outline: none;
+  border: none;
+  box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
+  padding: 0 3% 0 3%;
+  border-radius: 5px;
+}
+
+.login-button-state {
+  background-color: #37e484;
+  cursor: pointer;
+}
+.logout-button-state {
+  background-color: gray;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  nav {
+    width: 100%;
+    padding: 1% 10% 1% 10%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+    .logo {
+      flex: 1;
+      display: flex;
+      gap: 4%;
+    }
+    .menu {
+      flex: 2;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2%;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      button {
+        @include button();
+      }
+    }
+  }
+  .hero {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding-top: 8%;
+    .text-content {
+      height: 50%;
+      margin: 0 7% 0 7%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      h1 {
+        font-size: 2.5rem;
+        padding-bottom: 2%;
+      }
+      p {
+        color: gray;
+      }
+      .buttons {
+        padding-top: 5%;
+        button {
+          @include button();
+          padding: 3%;
+          font-size: 1rem;
+        }
+      }
+    }
+    .hero-image {
+      flex: 1;
+      z-index: 1;
+    }
+    .background {
+      position: absolute;
+      background-color: #37e484;
+      height: 35%;
+      width: 30%;
+      left: 70%;
+      top: 35%;
+      border-radius: 40% 0 0 40%;
+    }
+  }
+  .features-section {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10% 5% 5% 5%;
+    .upper-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      padding-bottom: 3%;
+      h2 {
+        font-size: 1.7rem;
+      }
+      p {
+        padding-top: 2%;
+        text-align: center;
+        width: 70%;
+        color: gray;
+      }
+    }
+    .tabs {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .tab-nav {
+        flex: 1;
+        padding-top: 3%;
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.47);
+        margin-bottom: 3%;
+        p {
+          color: gray;
+          font-weight: bold;
+          margin-bottom: 0;
+          flex: 1;
+          text-align: center;
+          padding-bottom: 2%;
+          cursor: pointer;
+        }
+        .active-tab {
+          color: black;
+          border-bottom: 4px #37e484 solid;
+          cursor: pointer;
+        }
+      }
+      .tab {
+        height: 500px;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        .illustration {
+          z-index: 1;
+        }
+        .text-content {
+          margin: 0 0 0 9%;
+          p {
+            width: 70%;
+          }
+        }
+        .background {
+          position: absolute;
+          background-color: #37e484;
+          height: 35%;
+          width: 30%;
+          left: 0;
+          top: 140%;
+          border-radius: 0 40% 40% 0;
+        }
+      }
+    }
+  }
+  .sign-up {
+    padding: 5% 0 5% 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .upper-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      padding-bottom: 3%;
+      h3 {
+        font-size: 1.7rem;
+      }
+      p {
+        padding-top: 2%;
+        text-align: center;
+        width: 70%;
+        color: gray;
+      }
+    }
+    .card {
+      margin-top: 2%;
+      width: 90%;
+      box-shadow: 5px 10px 10px 1px rgba(158, 158, 158, 0.1);
+      border: 1px solid rgba(128, 128, 128, 0.137);
+      border-radius: 10px;
+      display: flex;
+      .header {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        padding: 5% 0 5% 0;
+      }
+      form {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+        div {
+          width: 60%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          border: 1px solid black;
+          padding: 1%;
+          box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
+          border-radius: 10px;
+          label {
+            font-size: 0.8rem;
+            color: gray;
+          }
+          input {
+            height: 30px;
+            outline: none;
+            border: none;
+          }
+        }
+        button {
+          height: 10%;
+          background-color: #37e484;
+          outline: none;
+          border: none;
+          box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
+          padding: 0 3% 0 3%;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        p {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .faq {
+    padding: 5% 0 5% 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .upper-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      padding-bottom: 3%;
+      h3 {
+        font-size: 1.7rem;
+      }
+      p {
+        padding-top: 2%;
+        text-align: center;
+        width: 70%;
+        color: gray;
+      }
+    }
+    .cards {
+      padding-top: 3%;
+      width: 50%;
+      .card {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        .header {
+          display: flex;
+          justify-content: space-between;
+          padding: 1%;
+          h4 {
+            font-weight: normal;
+          }
+        }
+        p {
+          padding: 2%;
+          color: gray;
+        }
+      }
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #37e484;
+    width: 100%;
+    padding: 3% 0 3% 0;
+    color: black;
+  }
+}

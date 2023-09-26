@@ -12,7 +12,7 @@ function Link({ links }) {
   const addNew = async (e) => {
     const obj = {
       url: e.target.form[0].value,
-      id: 1,
+      id: localStorage.getItem("data"),
       point: currentPoint,
     };
 
@@ -20,13 +20,16 @@ function Link({ links }) {
       console.log("Empty String offered");
     } else {
       await addNewLink(obj);
-      const data = await fetchAllLinkData(1);
+      const data = await fetchAllLinkData(localStorage.getItem("data"));
       dispatch(setLinksFromDatabase(data));
     }
   };
 
   return (
     <div className="link-container">
+      <div className="header">
+        <h2>Link Manager</h2>
+      </div>
       <div className="links">
         <div className="link-nav">
           <img
@@ -43,11 +46,41 @@ function Link({ links }) {
             src="../../public/brown_large.png"
             alt=""
           />
-          <img src="../../public/brown_small.png" alt="" />
-          <img src="../../public/glass_house.png" alt="" />
-          <img src="../../public/green_small.png" alt="" />
-          <img src="../../public/rainbow.png" alt="" />
-          <img src="../../public/windmill.png" alt="" />
+          <img
+            onClick={() => {
+              setCurrentPoint("brown_small");
+            }}
+            src="../../public/brown_small.png"
+            alt=""
+          />
+          <img
+            onClick={() => {
+              setCurrentPoint("glass_house");
+            }}
+            src="../../public/glass_house.png"
+            alt=""
+          />
+          <img
+            onClick={() => {
+              setCurrentPoint("green_small");
+            }}
+            src="../../public/green_small.png"
+            alt=""
+          />
+          <img
+            onClick={() => {
+              setCurrentPoint("rainbow");
+            }}
+            src="../../public/rainbow.png"
+            alt=""
+          />
+          <img
+            onClick={() => {
+              setCurrentPoint("windmill");
+            }}
+            src="../../public/windmill.png"
+            alt=""
+          />
         </div>
         <div className="link-cards">
           {links.map((e) => {
@@ -70,7 +103,12 @@ function Link({ links }) {
         </div>
       </div>
       <form className="submit-new">
-        <input type="text" name="" id="" />
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="https://www.kierancroft.com"
+        />
         <button
           onClick={(e) => {
             e.preventDefault();
