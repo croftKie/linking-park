@@ -4,7 +4,6 @@ export const fetchAllLinkData = async (id) => {
   const { data } = await axios.get(
     `https://linkingpark-api.kierancroft.com/links/${id}`
   );
-  console.log(data);
   return data;
 };
 

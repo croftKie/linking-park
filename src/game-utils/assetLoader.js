@@ -1,18 +1,18 @@
 export function assetLoader() {
-  loadSprite("grass", "../public/grass.png");
-  loadSprite("blue_medium", "../public/blue_medium.png");
-  loadSprite("brown_large", "../public/brown_large.png");
-  loadSprite("brown_small", "../public/brown_small.png");
-  loadSprite("glass_house", "../public/glass_house.png");
-  loadSprite("green_small", "../public/green_small.png");
-  loadSprite("rainbow", "../public/rainbow.png");
-  loadSprite("windmill", "../public/windmill.png");
-  loadSprite("lamp", "../public/lamp.png");
-  loadSprite("tree_point", "../public/tree_point.png");
-  loadSprite("tree_round", "../public/tree_round.png");
-  loadSprite("boy", "../public/Boy.png");
+  loadSprite("grass", "./game/grass.png");
+  loadSprite("blue_medium", "./game/blue_medium.png");
+  loadSprite("brown_large", "./game/brown_large.png");
+  loadSprite("brown_small", "./game/brown_small.png");
+  loadSprite("glass_house", "./game/glass_house.png");
+  loadSprite("green_small", "./game/green_small.png");
+  loadSprite("rainbow", "./game/rainbow.png");
+  loadSprite("windmill", "./game/windmill.png");
+  loadSprite("lamp", "./game/lamp.png");
+  loadSprite("tree_point", "./game/tree_point.png");
+  loadSprite("tree_round", "./game/tree_round.png");
+  loadSprite("boy", "./game/Boy.png");
 
-  loadSpriteAtlas("../public/pathway.png", {
+  loadSpriteAtlas("./game/pathway.png", {
     left_path: {
       x: 16,
       y: 16,
@@ -110,7 +110,7 @@ export function assetLoader() {
       height: 16,
     },
   });
-  loadSpriteAtlas("../public/chars.png", {
+  loadSpriteAtlas("./game/chars.png", {
     hero: {
       x: 0,
       y: 32,
@@ -127,7 +127,7 @@ export function assetLoader() {
       },
     },
   });
-  loadSpriteAtlas("../public/flowers_rocks.png", {
+  loadSpriteAtlas("./game/flowers_rocks.png", {
     tree_stump: {
       x: 16,
       y: 0,
@@ -160,5 +160,5 @@ export function assetLoader() {
     },
   });
 
-  loadSound("forest_song", "../public/forest_song.mp3");
+  loadSound("forest_song", "./game/forest_song.mp3");
 }

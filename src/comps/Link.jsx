@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import edit from "../assets/edit.png";
 import del from "../assets/delete.png";
+import blue_medium from "../assets/game/blue_medium.png";
+import brown_large from "../assets/game/brown_large.png";
+import brown_small from "../assets/game/brown_small.png";
+import glass_house from "../assets/game/glass_house.png";
+import green_small from "../assets/game/green_small.png";
+import rainbow from "../assets/game/rainbow.png";
+import windmill from "../assets/game/windmill.png";
 import { addNewLink, fetchAllLinkData } from "../utils/fetchData";
 import { useDispatch } from "react-redux";
 import { setLinksFromDatabase } from "../store/features/linkFeature";
@@ -21,11 +28,9 @@ function Link({ links }) {
     } else {
       await addNewLink(obj);
       const data = await fetchAllLinkData(localStorage.getItem("data"));
-      console.log(data);
       dispatch(setLinksFromDatabase(data));
     }
   };
-
   return (
     <div className="link-container">
       <div className="header">
@@ -37,49 +42,49 @@ function Link({ links }) {
             onClick={() => {
               setCurrentPoint("blue_medium");
             }}
-            src="../../public/blue_medium.png"
+            src={blue_medium}
             alt=""
           />
           <img
             onClick={() => {
               setCurrentPoint("brown_large");
             }}
-            src="../../public/brown_large.png"
+            src={brown_large}
             alt=""
           />
           <img
             onClick={() => {
               setCurrentPoint("brown_small");
             }}
-            src="../../public/brown_small.png"
+            src={brown_small}
             alt=""
           />
           <img
             onClick={() => {
               setCurrentPoint("glass_house");
             }}
-            src="../../public/glass_house.png"
+            src={glass_house}
             alt=""
           />
           <img
             onClick={() => {
               setCurrentPoint("green_small");
             }}
-            src="../../public/green_small.png"
+            src={green_small}
             alt=""
           />
           <img
             onClick={() => {
               setCurrentPoint("rainbow");
             }}
-            src="../../public/rainbow.png"
+            src={rainbow}
             alt=""
           />
           <img
             onClick={() => {
               setCurrentPoint("windmill");
             }}
-            src="../../public/windmill.png"
+            src={windmill}
             alt=""
           />
         </div>
