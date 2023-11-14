@@ -95,6 +95,13 @@ body {
   height: 40px;
   width: 50px;
   border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.link-container .links .link-nav img:hover {
+  transform: scale(105%);
+}
+.link-container .links .link-nav img:active {
+  transform: scale(90%);
 }
 .link-container .links .link-nav .active {
   background-color: #37e484;
@@ -133,9 +140,16 @@ body {
   border: none;
   outline: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .link-container .links .link-cards .card .changes button img {
   height: 25px;
+}
+.link-container .links .link-cards .card .changes button:hover {
+  transform: scale(105%);
+}
+.link-container .links .link-cards .card .changes button:active {
+  transform: scale(90%);
 }
 .link-container .submit-new {
   background-color: white;
@@ -165,6 +179,7 @@ body {
   border: none;
   border-radius: 0 5px 5px 0;
   background-color: #37e484;
+  cursor: pointer;
 }
 .link-container .submit-new button:hover {
   transform: scale(105%);
@@ -206,7 +221,7 @@ body {
   border-radius: 5px;
   box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
   width: 100%;
-  padding: 5%;
+  padding: 10% 0 0 0;
   display: flex;
   flex-direction: column;
 }
@@ -220,6 +235,12 @@ body {
   /* Hide default HTML checkbox */
   /* The slider */
   /* Rounded sliders */
+}
+.account .settings-container .settings .setting-card:nth-of-type(1) {
+  background-color: lightgray;
+}
+.account .settings-container .settings .setting-card:nth-of-type(2) {
+  background-color: lightgray;
 }
 .account .settings-container .settings .setting-card p {
   margin: 0;
@@ -296,7 +317,7 @@ body {
   border-radius: 5px;
   box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
   width: 100%;
-  padding: 5% 0 5% 0;
+  padding: 10% 0 0 0;
   display: flex;
   flex-direction: column;
 }
@@ -312,4 +333,17 @@ body {
 }
 .account .user-container .profile .setting-card img {
   height: 25px;
+}
+.account .user-container .profile .setting-card:hover {
+  background-color: #37e484;
+  cursor: pointer;
+}
+.account .user-container .profile .setting-card:nth-of-type(1) {
+  background-color: lightgray;
+}
+.account .user-container .profile .setting-card:nth-of-type(2) {
+  background-color: lightgray;
+}
+.account .user-container .profile .setting-card:nth-of-type(4) {
+  background-color: lightgray;
 }/*# sourceMappingURL=App.css.map */

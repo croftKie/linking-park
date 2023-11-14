@@ -61,7 +61,7 @@ function App() {
           {activeMode === 1 ? (
             <Link links={links} />
           ) : activeMode === 2 ? (
-            <User />
+            <User setParkMode={setParkMode} />
           ) : (
             <></>
           )}

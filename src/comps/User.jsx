@@ -2,7 +2,7 @@ import React from "react";
 import delImg from "../assets/delete.png";
 import left from "../assets/left.png";
 import link_open from "../assets/link_open.png";
-function User() {
+function User({ setParkMode }) {
   return (
     <div className="account">
       <div className="settings-container">
@@ -15,18 +15,15 @@ function User() {
             <p>Leave Feedback on GitHub</p>
           </div>
           <div className="setting-card">
-            <p className="name">Toggle Dark Mode</p>
-            <label class="switch">
-              <input type="checkbox" />
-              <span class="slider round"></span>
-            </label>
+            <img src={link_open} alt="" />
+            <p>Check out my other work</p>
           </div>
           <div className="setting-card">
             <p className="name">Toggle Music</p>
             <label class="switch">
               <input type="checkbox" />
               <span class="slider round"></span>
-            </label>{" "}
+            </label>
           </div>
         </div>
       </div>
@@ -43,7 +40,13 @@ function User() {
             <img src={left} alt="" />
             <p className="name">Change your Password</p>
           </div>
-          <div className="setting-card">
+          <div
+            onClick={() => {
+              localStorage.removeItem("data");
+              window.location.reload();
+            }}
+            className="setting-card"
+          >
             <img src={left} alt="" />
             <p className="name">Sign Out</p>
           </div>

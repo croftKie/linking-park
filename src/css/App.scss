@@ -12,11 +12,6 @@ body {
   background-color: #5088d8;
 }
 
-canvas {
-  // border-radius: 30px;
-  // border: 10px beige solid;
-}
-
 .nav-container {
   position: absolute;
   top: 0.5%;
@@ -97,6 +92,13 @@ canvas {
         height: 40px;
         width: 50px;
         border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        &:hover {
+          transform: scale(105%);
+        }
+        &:active {
+          transform: scale(90%);
+        }
       }
       .active {
         background-color: #37e484;
@@ -133,8 +135,15 @@ canvas {
             border: none;
             outline: none;
             background-color: transparent;
+            cursor: pointer;
             img {
               height: 25px;
+            }
+            &:hover {
+              transform: scale(105%);
+            }
+            &:active {
+              transform: scale(90%);
             }
           }
         }
@@ -168,6 +177,7 @@ canvas {
       border: none;
       border-radius: 0 5px 5px 0;
       background-color: #37e484;
+      cursor: pointer;
       &:hover {
         transform: scale(105%);
       }
@@ -209,7 +219,7 @@ canvas {
       border-radius: 5px;
       box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
       width: 100%;
-      padding: 5%;
+      padding: 10% 0 0 0;
       display: flex;
       flex-direction: column;
       .setting-card {
@@ -218,6 +228,12 @@ canvas {
         align-items: center;
         justify-content: space-between;
         border-bottom: 1px solid grey;
+        &:nth-of-type(1) {
+          background-color: lightgray;
+        }
+        &:nth-of-type(2) {
+          background-color: lightgray;
+        }
         p {
           margin: 0;
         }
@@ -303,7 +319,7 @@ canvas {
       border-radius: 5px;
       box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
       width: 100%;
-      padding: 5% 0 5% 0;
+      padding: 10% 0 0 0;
       display: flex;
       flex-direction: column;
       .setting-card {
@@ -317,6 +333,19 @@ canvas {
         }
         img {
           height: 25px;
+        }
+        &:hover {
+          background-color: #37e484;
+          cursor: pointer;
+        }
+        &:nth-of-type(1) {
+          background-color: lightgray;
+        }
+        &:nth-of-type(2) {
+          background-color: lightgray;
+        }
+        &:nth-of-type(4) {
+          background-color: lightgray;
         }
       }
     }
