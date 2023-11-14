@@ -7,6 +7,11 @@ body {
   overflow: visible;
 }
 
+#root {
+  display: flex;
+  background-color: white;
+}
+
 .login-button-state {
   background-color: #37e484;
   cursor: pointer;
@@ -36,9 +41,9 @@ body {
   gap: 4%;
 }
 .home nav .menu {
-  flex: 2;
+  flex: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 2%;
 }
@@ -46,7 +51,13 @@ body {
   text-decoration: none;
   color: black;
 }
-.home nav .menu button {
+.home nav .buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex: 1;
+}
+.home nav .buttons button {
   height: 100%;
   outline: none;
   border: none;
@@ -92,14 +103,8 @@ body {
   flex: 1;
   z-index: 1;
 }
-.home .hero .background {
-  position: absolute;
-  background-color: #37e484;
-  height: 35%;
-  width: 30%;
-  left: 70%;
-  top: 35%;
-  border-radius: 40% 0 0 40%;
+.home .hero .hero-image img {
+  width: 80%;
 }
 .home .features-section {
   width: 90%;
@@ -161,6 +166,9 @@ body {
 }
 .home .features-section .tabs .tab .illustration {
   z-index: 1;
+}
+.home .features-section .tabs .tab .illustration img {
+  width: 100%;
 }
 .home .features-section .tabs .tab .text-content {
   margin: 0 0 0 9%;
@@ -305,4 +313,317 @@ body {
   width: 100%;
   padding: 3% 0 3% 0;
   color: black;
+}
+
+@media screen and (max-width: 800px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home nav {
+    width: 100%;
+    padding: 1% 10% 1% 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+    gap: 10px;
+  }
+  .home nav .logo {
+    justify-self: center;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    display: flex;
+    width: 90%;
+    gap: 4%;
+    justify-content: center;
+  }
+  .home nav .menu {
+    display: none;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+  }
+  .home nav .menu a {
+    text-decoration: none;
+    color: black;
+  }
+  .home nav .buttons {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .home nav .buttons button {
+    height: 100%;
+    outline: none;
+    border: none;
+    box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
+    padding: 0 3% 0 3%;
+    border-radius: 5px;
+  }
+  .home .hero {
+    width: 80%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 40%;
+  }
+  .home .hero .text-content {
+    height: 50%;
+    margin: 0 7% 0 7%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .home .hero .text-content h1 {
+    font-size: 2.5rem;
+    padding-bottom: 2%;
+  }
+  .home .hero .text-content p {
+    color: gray;
+  }
+  .home .hero .text-content .buttons {
+    padding-top: 5%;
+  }
+  .home .hero .text-content .buttons button {
+    height: 100%;
+    outline: none;
+    border: none;
+    box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
+    padding: 0 3% 0 3%;
+    border-radius: 5px;
+    padding: 3%;
+    font-size: 1rem;
+  }
+  .home .hero .hero-image {
+    flex: 1;
+    z-index: 1;
+    text-align: center;
+  }
+  .home .hero .hero-image img {
+    width: 80%;
+  }
+  .home .features-section {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10% 5% 5% 5%;
+  }
+  .home .features-section .upper-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 3%;
+  }
+  .home .features-section .upper-text h2 {
+    font-size: 1.7rem;
+  }
+  .home .features-section .upper-text p {
+    padding-top: 2%;
+    text-align: center;
+    width: 70%;
+    color: gray;
+  }
+  .home .features-section .tabs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home .features-section .tabs .tab-nav {
+    flex: 1;
+    padding-top: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.47);
+    margin-bottom: 3%;
+  }
+  .home .features-section .tabs .tab-nav p {
+    color: gray;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    flex: 1;
+    text-align: center;
+    padding-bottom: 2%;
+    cursor: pointer;
+  }
+  .home .features-section .tabs .tab-nav .active-tab {
+    color: black;
+    border-bottom: 4px #37e484 solid;
+    cursor: pointer;
+  }
+  .home .features-section .tabs .tab {
+    height: 500px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home .features-section .tabs .tab .illustration {
+    z-index: 1;
+    height: 200px;
+  }
+  .home .features-section .tabs .tab .illustration img {
+    width: 100%;
+    height: 100%;
+  }
+  .home .features-section .tabs .tab .text-content {
+    margin: 0 0 9% 0;
+    width: 100%;
+    text-align: center;
+  }
+  .home .features-section .tabs .tab .text-content p {
+    width: 100%;
+  }
+  .home .sign-up {
+    padding: 5% 0 5% 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home .sign-up .upper-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 3%;
+    text-align: center;
+  }
+  .home .sign-up .upper-text h3 {
+    font-size: 1.7rem;
+  }
+  .home .sign-up .upper-text p {
+    padding-top: 2%;
+    text-align: center;
+    width: 70%;
+    color: gray;
+  }
+  .home .sign-up .card {
+    margin-top: 2%;
+    width: 100%;
+    box-shadow: 5px 10px 10px 1px rgba(158, 158, 158, 0.1);
+    border: 1px solid rgba(128, 128, 128, 0.137);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .home .sign-up .card .header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10% 0 5% 0;
+  }
+  .home .sign-up .card .header svg {
+    height: 80%;
+    width: 80%;
+  }
+  .home .sign-up .card form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    padding: 15% 0 10% 0;
+  }
+  .home .sign-up .card form div {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 1%;
+    box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
+    border-radius: 10px;
+  }
+  .home .sign-up .card form div label {
+    font-size: 0.8rem;
+    color: gray;
+  }
+  .home .sign-up .card form div input {
+    height: 30px;
+    outline: none;
+    border: none;
+  }
+  .home .sign-up .card form button {
+    height: 10%;
+    background-color: #37e484;
+    outline: none;
+    border: none;
+    box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
+    padding: 0 3% 0 3%;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .home .sign-up .card form p {
+    cursor: pointer;
+  }
+  .home .faq {
+    padding: 5% 0 5% 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home .faq .upper-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding-bottom: 3%;
+    text-align: center;
+  }
+  .home .faq .upper-text h3 {
+    font-size: 1.7rem;
+  }
+  .home .faq .upper-text p {
+    padding-top: 2%;
+    text-align: center;
+    width: 100%;
+    color: gray;
+  }
+  .home .faq .cards {
+    padding-top: 3%;
+    width: 90%;
+  }
+  .home .faq .cards .card {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  .home .faq .cards .card .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+  }
+  .home .faq .cards .card .header h4 {
+    font-weight: normal;
+  }
+  .home .faq .cards .card p {
+    padding: 2%;
+    color: gray;
+  }
+  .home footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #37e484;
+    width: 100%;
+    padding: 3% 0 3% 0;
+    color: black;
+    text-align: center;
+  }
 }/*# sourceMappingURL=home.css.map */

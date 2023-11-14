@@ -11,18 +11,23 @@ export function main(height, width, openLinks) {
     width: width,
     height: height,
     scale: 1,
-    canvas: document.querySelector("canvas"),
+    canvas: document.querySelector(".game-content>canvas"),
   });
 
   assetLoader();
 
   scene("town", () => {
-    setBackground(Color.fromHex("#509B66"));
-    const groundTiles = addLevel(levels[0], levelOptions[0]);
+    setBackground(Color.fromHex("#5088d8"));
+    const floorTiles = addLevel(levels[0], levelOptions[0]);
+
+    const groundTiles = addLevel(levels[1], levelOptions[1]);
+    const borderTiles = addLevel(levels[2], levelOptions[2]);
     const player = charLoader();
-    const TreeBoundrayLayer = addLevel(levels[1], levelOptions[1]);
-    locationLoader(width, height);
-    const innerTreeLayer = addLevel(levels[2], levelOptions[1]);
+    const houseTiles = addLevel(levels[3], levelOptions[3]);
+
+    // const TreeBoundrayLayer = addLevel(levels[1], levelOptions[1]);
+    // locationLoader(width, height);
+    // const innerTreeLayer = addLevel(levels[2], levelOptions[1]);
 
     if (true) {
       const music = play("forest_song", {

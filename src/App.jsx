@@ -28,9 +28,11 @@ function App() {
     setActiveMode(mode);
   };
   const openLinks = (currentPoint) => {
+    console.log(currentPoint);
     links.forEach((e) => {
       if (e.point_of_interest === currentPoint) {
-        window.open(e.url);
+        console.log(e.url);
+        window.open(`https://${e.url}`);
       }
     });
   };
@@ -39,7 +41,9 @@ function App() {
     dispatch(setLinksFromDatabase(data));
   };
   const startGame = () => {
-    main(window.innerHeight, window.innerWidth, openLinks);
+    main(window.innerHeight * 0.89, window.innerWidth * 0.9, openLinks);
+    document.getElementById("root").style.height = 0;
+    document.getElementById("root").style.width = 0;
   };
 
   useEffect(() => {

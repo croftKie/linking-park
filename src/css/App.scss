@@ -6,10 +6,21 @@
 
 body {
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5088d8;
+}
+
+canvas {
+  // border-radius: 30px;
+  // border: 10px beige solid;
 }
 
 .nav-container {
   position: absolute;
+  top: 0.5%;
+  right: 1%;
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -17,7 +28,7 @@ body {
     width: 10%;
     display: flex;
     gap: 5%;
-    padding: 1%;
+    padding: 0;
     button {
       height: 40px;
       width: 40px;
@@ -28,8 +39,15 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
       img {
         height: 30px;
+      }
+      &:hover {
+        transform: scale(105%);
+      }
+      &:active {
+        transform: scale(90%);
       }
     }
   }
@@ -39,8 +57,8 @@ body {
   position: absolute;
   width: 40vw;
   height: 80vh;
-  left: 59vw;
-  top: 25vh;
+  right: 3%;
+  top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,17 +85,21 @@ body {
     grid-template-columns: 1fr 9fr;
     width: 87%;
     .link-nav {
-      border-radius: 5px;
       grid-column: 1/2;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-around;
       gap: 5%;
       height: 100%;
       img {
-        padding: 1%;
+        padding: 7.5%;
         height: 40px;
+        width: 50px;
+        border-radius: 0 5px 5px 0;
+      }
+      .active {
+        background-color: #37e484;
       }
     }
     .link-cards {
@@ -146,6 +168,12 @@ body {
       border: none;
       border-radius: 0 5px 5px 0;
       background-color: #37e484;
+      &:hover {
+        transform: scale(105%);
+      }
+      &:active {
+        transform: scale(90%);
+      }
     }
   }
 }
@@ -154,8 +182,8 @@ body {
   position: absolute;
   width: 20vw;
   height: 80vh;
-  left: 76.5vw;
-  top: 30vh;
+  right: 6%;
+  top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;

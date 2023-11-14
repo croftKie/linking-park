@@ -1,6 +1,8 @@
 export function collisionController(player, openLinks) {
   onCollide("player", "item", (p, h) => {
-    const name = Object.keys(h.inspect())[7];
+    const spot_name = Object.keys(h.inspect()).find((element) =>
+      element.includes("spot")
+    );
     const background = add([
       pos(width() / 2, height() - 80),
       anchor("center"),
@@ -9,7 +11,7 @@ export function collisionController(player, openLinks) {
       opacity(0.75),
     ]);
     const text_text = add([
-      text(`My X Tabs... (Click E to Open)`, {
+      text(`My ${spot_name} Tabs... (Click E to Open)`, {
         size: 30,
       }),
       pos(width() / 2 + 30, height() - 80),
@@ -22,7 +24,7 @@ export function collisionController(player, openLinks) {
       pos(width() / 2 - 270, height() - 80),
     ]);
     const click = onKeyPress("e", () => {
-      openLinks(name);
+      openLinks(spot_name);
     });
     onCollideEnd("player", "item", () => {
       text_text.destroy();
