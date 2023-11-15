@@ -21,6 +21,29 @@ body {
   border-radius: 5px;
 }
 
+button {
+  @include button();
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  &:hover{
+    transform: scale(105%);
+  }
+  &:active{
+    transform: scale(95%);
+  }
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
 .login-button-state {
   background-color: #37e484;
   cursor: pointer;
@@ -51,20 +74,14 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 2%;
-      a {
-        text-decoration: none;
-        color: black;
-      }
+      gap: 5%;
+
     }
     .buttons {
       display: flex;
       justify-content: flex-end;
       gap: 10px;
       flex: 1;
-      button {
-        @include button();
-      }
     }
   }
   .hero {
@@ -202,6 +219,7 @@ body {
         text-align: center;
         width: 70%;
         color: gray;
+
       }
     }
     .card {
@@ -255,6 +273,9 @@ body {
         }
         p {
           cursor: pointer;
+          &:hover{
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -313,7 +334,7 @@ body {
   }
 }
 
-@media screen and (max-width: "800px") {
+@media screen and (max-width: "870px") {
   .home {
     display: flex;
     flex-direction: column;
@@ -365,7 +386,7 @@ body {
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
-      padding-top: 40%;
+      padding-top: 20vh;
       .text-content {
         height: 50%;
         margin: 0 7% 0 7%;
@@ -395,7 +416,7 @@ body {
         z-index: 1;
         text-align: center;
         img {
-          width: 80%;
+          width: 50%;
         }
       }
     }

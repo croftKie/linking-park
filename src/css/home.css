@@ -12,6 +12,34 @@ body {
   background-color: white;
 }
 
+button {
+  height: 100%;
+  outline: none;
+  border: none;
+  box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
+  padding: 0 3% 0 3%;
+  border-radius: 5px;
+}
+button a {
+  text-decoration: none;
+  color: black;
+}
+button:hover {
+  transform: scale(105%);
+}
+button:active {
+  transform: scale(95%);
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 .login-button-state {
   background-color: #37e484;
   cursor: pointer;
@@ -45,25 +73,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2%;
-}
-.home nav .menu a {
-  text-decoration: none;
-  color: black;
+  gap: 5%;
 }
 .home nav .buttons {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
   flex: 1;
-}
-.home nav .buttons button {
-  height: 100%;
-  outline: none;
-  border: none;
-  box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
-  padding: 0 3% 0 3%;
-  border-radius: 5px;
 }
 .home .hero {
   width: 80%;
@@ -262,6 +278,9 @@ body {
 .home .sign-up .card form p {
   cursor: pointer;
 }
+.home .sign-up .card form p:hover {
+  text-decoration: underline;
+}
 .home .faq {
   padding: 5% 0 5% 0;
   width: 80%;
@@ -315,7 +334,7 @@ body {
   color: black;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 870px) {
   .home {
     display: flex;
     flex-direction: column;
@@ -373,7 +392,7 @@ body {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    padding-top: 40%;
+    padding-top: 20vh;
   }
   .home .hero .text-content {
     height: 50%;
@@ -410,7 +429,7 @@ body {
     text-align: center;
   }
   .home .hero .hero-image img {
-    width: 80%;
+    width: 50%;
   }
   .home .features-section {
     width: 90%;
