@@ -41,7 +41,7 @@ function App() {
     dispatch(setLinksFromDatabase(data));
   };
   const startGame = () => {
-    main(window.innerHeight * 0.89, window.innerWidth * 0.9, openLinks);
+    main(window.innerHeight * 0.9, window.innerWidth * 0.9, openLinks);
     document.getElementById("root").style.height = 0;
     document.getElementById("root").style.width = 0;
   };

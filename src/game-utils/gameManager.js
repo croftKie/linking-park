@@ -5,12 +5,13 @@ import { charLoader } from "./charLoader.js";
 import { movementController } from "./movementController.js";
 import { collisionController } from "./collisionController.js";
 import { locationLoader } from "./locationLoader.js";
+import { SCALE_MULTIPLIER } from "../utils/calculations.js";
 
 export function main(height, width, openLinks) {
   kaboom({
-    width: width,
-    height: height,
-    scale: 1,
+    width: 48 * 16,
+    height: 26 * 16,
+    scale: SCALE_MULTIPLIER(),
     canvas: document.querySelector(".game-content>canvas"),
   });
 
@@ -18,16 +19,20 @@ export function main(height, width, openLinks) {
 
   scene("town", () => {
     setBackground(Color.fromHex("#5088d8"));
-    const floorTiles = addLevel(levels[0], levelOptions[0]);
 
-    const groundTiles = addLevel(levels[1], levelOptions[1]);
-    const borderTiles = addLevel(levels[2], levelOptions[2]);
+    levels.forEach((level, index) => {
+      if (index < 3) {
+        addLevel(levels[index], levelOptions[index]);
+      }
+    });
+
     const player = charLoader();
-    const houseTiles = addLevel(levels[3], levelOptions[3]);
 
-    // const TreeBoundrayLayer = addLevel(levels[1], levelOptions[1]);
-    // locationLoader(width, height);
-    // const innerTreeLayer = addLevel(levels[2], levelOptions[1]);
+    levels.forEach((level, index) => {
+      if (index >= 3) {
+        addLevel(levels[index], levelOptions[index]);
+      }
+    });
 
     if (true) {
       const music = play("forest_song", {

@@ -160,6 +160,9 @@ export function assetLoader() {
     },
   });
 
+  //
+  //
+  // TILESETS
   loadSpriteAtlas("./tileset/tileset.png", {
     flat_grass: {
       x: 16,
@@ -168,132 +171,33 @@ export function assetLoader() {
       height: 16,
     },
   });
-  loadSpriteAtlas("./tileset/path_tileset.png", {
-    N: {
-      x: 16,
-      y: 0,
+  loadSpriteAtlas(
+    "./tileset/path.png",
+    createSpriteAtlas(".tileset/path.png", {
+      cells: 9,
       width: 16,
       height: 16,
-    },
-    NE: {
-      x: 32,
-      y: 0,
+      row_length: 3,
+    })
+  );
+  loadSpriteAtlas(
+    "./tileset/border.png",
+    createSpriteAtlas(".tileset/border.png", {
+      cells: 9,
       width: 16,
       height: 16,
-    },
-    E: {
-      x: 32,
-      y: 16,
+      row_length: 3,
+    })
+  );
+  loadSpriteAtlas(
+    "./tileset/grass.png",
+    createSpriteAtlas(".tileset/grass.png", {
+      cells: 2,
       width: 16,
       height: 16,
-    },
-    SE: {
-      x: 32,
-      y: 32,
-      width: 16,
-      height: 16,
-    },
-    S: {
-      x: 16,
-      y: 32,
-      width: 16,
-      height: 16,
-    },
-    SW: {
-      x: 0,
-      y: 32,
-      width: 16,
-      height: 16,
-    },
-    W: {
-      x: 0,
-      y: 16,
-      width: 16,
-      height: 16,
-    },
-    NW: {
-      x: 0,
-      y: 0,
-      width: 16,
-      height: 16,
-    },
-    MID: {
-      x: 16,
-      y: 16,
-      width: 16,
-      height: 16,
-    },
-  });
-  loadSpriteAtlas("./tileset/border_tileset.png", {
-    MID_GRASS: {
-      x: 16,
-      y: 16,
-      width: 16,
-      height: 16,
-    },
-    B_N: {
-      x: 16,
-      y: 0,
-      width: 16,
-      height: 16,
-    },
-    B_NE: {
-      x: 32,
-      y: 0,
-      width: 16,
-      height: 16,
-    },
-    B_E: {
-      x: 32,
-      y: 16,
-      width: 16,
-      height: 16,
-    },
-    B_SE: {
-      x: 32,
-      y: 32,
-      width: 16,
-      height: 16,
-    },
-    B_S: {
-      x: 16,
-      y: 32,
-      width: 16,
-      height: 16,
-    },
-    B_SW: {
-      x: 0,
-      y: 32,
-      width: 16,
-      height: 16,
-    },
-    B_W: {
-      x: 0,
-      y: 16,
-      width: 16,
-      height: 16,
-    },
-    B_NW: {
-      x: 0,
-      y: 0,
-      width: 16,
-      height: 16,
-    },
-  });
-  loadSpriteAtlas("./tileset/grass_effects.png", {
-    grass_one: {
-      x: 0,
-      y: 0,
-      width: 16,
-      height: 16,
-    },
-    grass_two: {
-      x: 16,
-      y: 0,
-      width: 16,
-      height: 16,
-    },
-  });
+      row_length: 3,
+    })
+  );
   loadSpriteAtlas("./tileset/water_tileset.png", {
     water: {
       x: 0,
@@ -302,128 +206,67 @@ export function assetLoader() {
       height: 16,
     },
   });
-  loadSpriteAtlas("./tileset/house_one_tileset.png", {
-    one_one: {
-      x: 0,
-      y: 0,
+  loadSpriteAtlas(
+    "./tileset/mid_blue.png",
+    createSpriteAtlas(".tileset/mid_blue.png", {
+      cells: 20,
       width: 16,
       height: 16,
-    },
-    one_two: {
-      x: 16,
-      y: 0,
+      row_length: 4,
+    })
+  );
+  loadSpriteAtlas(
+    "./tileset/mid_red.png",
+    createSpriteAtlas(".tileset/mid_red.png", {
+      cells: 20,
       width: 16,
       height: 16,
-    },
-    one_three: {
-      x: 32,
-      y: 0,
+      row_length: 4,
+    })
+  );
+  loadSpriteAtlas(
+    "./tileset/small.png",
+    createSpriteAtlas(".tileset/small.png", {
+      cells: 27,
       width: 16,
       height: 16,
-    },
-    one_four: {
-      x: 48,
-      y: 0,
+      row_length: 3,
+    })
+  );
+  loadSpriteAtlas(
+    "./tileset/large.png",
+    createSpriteAtlas(".tileset/large.png", {
+      cells: 50,
       width: 16,
       height: 16,
-    },
-    two_one: {
-      x: 0,
-      y: 16,
-      width: 16,
-      height: 16,
-    },
-    two_two: {
-      x: 16,
-      y: 16,
-      width: 16,
-      height: 16,
-    },
-    two_three: {
-      x: 32,
-      y: 16,
-      width: 16,
-      height: 16,
-    },
-    two_four: {
-      x: 48,
-      y: 16,
-      width: 16,
-      height: 16,
-    },
-    three_one: {
-      x: 0,
-      y: 32,
-      width: 16,
-      height: 16,
-    },
-    three_two: {
-      x: 16,
-      y: 32,
-      width: 16,
-      height: 16,
-    },
-    three_three: {
-      x: 32,
-      y: 32,
-      width: 16,
-      height: 16,
-    },
-    three_four: {
-      x: 48,
-      y: 32,
-      width: 16,
-      height: 16,
-    },
-    four_one: {
-      x: 0,
-      y: 48,
-      width: 16,
-      height: 16,
-    },
-    four_two: {
-      x: 16,
-      y: 48,
-      width: 16,
-      height: 16,
-    },
-    four_three: {
-      x: 32,
-      y: 48,
-      width: 16,
-      height: 16,
-    },
-    four_four: {
-      x: 48,
-      y: 48,
-      width: 16,
-      height: 16,
-    },
-    five_one: {
-      x: 0,
-      y: 64,
-      width: 16,
-      height: 16,
-    },
-    five_two: {
-      x: 16,
-      y: 64,
-      width: 16,
-      height: 16,
-    },
-    five_three: {
-      x: 32,
-      y: 64,
-      width: 16,
-      height: 16,
-    },
-    five_four: {
-      x: 48,
-      y: 64,
-      width: 16,
-      height: 16,
-    },
-  });
+      row_length: 5,
+    })
+  );
 
   loadSound("forest_song", "./game/forest_song.mp3");
+}
+
+function createSpriteAtlas(name, options) {
+  const obj = {};
+  const string = name.slice(name.lastIndexOf("/") + 1, name.lastIndexOf("."));
+
+  let DEFAULT_X = 0;
+  let DEFAULT_Y = 0;
+
+  for (let i = 0; i < options.cells; i++) {
+    obj[`${string}-${i}`] = {
+      x: DEFAULT_X,
+      y: DEFAULT_Y,
+      width: options.width,
+      height: options.height,
+    };
+    if ((i + 1) % options.row_length === 0) {
+      DEFAULT_Y += options.height;
+      DEFAULT_X = 0;
+    } else {
+      DEFAULT_X += options.width;
+    }
+  }
+
+  return obj;
 }
