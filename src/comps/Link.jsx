@@ -72,25 +72,57 @@ function Link({ links }) {
             src={brown_small}
             alt=""
           />
+          <img
+            className="active"
+            onClick={(e) => {
+              setCurrentPoint("spot_four");
+              setActive(e);
+            }}
+            src={blue_medium}
+            alt=""
+          />
+          <img
+            onClick={(e) => {
+              setCurrentPoint("spot_five");
+              setActive(e);
+            }}
+            src={brown_large}
+            alt=""
+          />
+          <img
+            onClick={(e) => {
+              setCurrentPoint("spot_six");
+              setActive(e);
+            }}
+            src={brown_small}
+            alt=""
+          />
         </div>
         <div className="link-cards">
-          {links.map((e) => {
-            if (e.point_of_interest === currentPoint) {
-              return (
-                <div className="card">
-                  <p className="name">{e.url}</p>
-                  <div className="changes">
-                    <button>
-                      <img src={edit} alt="" />
-                    </button>
-                    <button>
-                      <img src={del} alt="" />
-                    </button>
+          {links.length === 0 ? (
+            <div className="noLinks">
+              <h4>No links added yet...</h4>
+              <p>Add a url to the form below to added a new link.</p>
+            </div>
+          ) : (
+            links.map((e) => {
+              if (e.point_of_interest === currentPoint) {
+                return (
+                  <div className="card">
+                    <p className="name">{e.url}</p>
+                    <div className="changes">
+                      <button>
+                        <img src={edit} alt="" />
+                      </button>
+                      <button>
+                        <img src={del} alt="" />
+                      </button>
+                    </div>
                   </div>
-                </div>
-              );
-            }
-          })}
+                );
+              }
+            })
+          )}
         </div>
       </div>
       <form className="submit-new">

@@ -11,6 +11,7 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { fetchAllLinkData } from "./utils/fetchData";
 import Home from "./comps/Home";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 function App() {
   // variables
@@ -50,25 +51,33 @@ function App() {
     fetch();
   }, []);
 
+  const game = (
+    <div id="container">
+      <div className="game-content">
+        <canvas></canvas>
+      </div>
+      <Nav setMode={setMode} />
+      {activeMode === 1 ? (
+        <Link links={links} />
+      ) : activeMode === 2 ? (
+        <User setParkMode={setParkMode} />
+      ) : (
+        <></>
+      )}
+    </div>
+  );
+
   return (
     <>
-      {parkMode ? (
-        <div id="container">
-          <div className="game-content">
-            <canvas></canvas>
-          </div>
-          <Nav setMode={setMode} />
-          {activeMode === 1 ? (
-            <Link links={links} />
-          ) : activeMode === 2 ? (
-            <User setParkMode={setParkMode} />
-          ) : (
-            <></>
-          )}
-        </div>
-      ) : (
-        <Home startGame={startGame} setParkMode={setParkMode} />
-      )}
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={<Home startGame={startGame} setParkMode={setParkMode} />}
+          />
+          <Route path="/dashboard" element={game} />
+        </Routes>
+      </Router>
     </>
   );
 }

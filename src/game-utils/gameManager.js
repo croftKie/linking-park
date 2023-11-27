@@ -4,7 +4,6 @@ import { levels, levelOptions } from "./levelLoader.js";
 import { charLoader } from "./charLoader.js";
 import { movementController } from "./movementController.js";
 import { collisionController } from "./collisionController.js";
-import { locationLoader } from "./locationLoader.js";
 import { SCALE_MULTIPLIER } from "../utils/calculations.js";
 
 export function main(height, width, openLinks) {
@@ -20,21 +19,20 @@ export function main(height, width, openLinks) {
   scene("town", () => {
     setBackground(Color.fromHex("#5088d8"));
 
+    // INIT LEVELS AND CHAR
     levels.forEach((level, index) => {
       if (index < 3) {
         addLevel(levels[index], levelOptions[index]);
       }
     });
-
     const player = charLoader();
-
     levels.forEach((level, index) => {
       if (index >= 3) {
         addLevel(levels[index], levelOptions[index]);
       }
     });
 
-    if (true) {
+    if (false) {
       const music = play("forest_song", {
         volume: 0.2,
         loop: true,

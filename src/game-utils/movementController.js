@@ -1,9 +1,13 @@
+import { SCALE_MULTIPLIER } from "../utils/calculations";
+
+const SPEED = 120 / SCALE_MULTIPLIER();
+
 export function movementController(player) {
   onKeyDown("w", () => {
     if (isKeyDown("a") || isKeyDown("s") || isKeyDown("d")) {
       return;
     }
-    player.move(0, -150);
+    player.move(0, -SPEED);
   });
   onKeyPress("w", () => {
     if (isKeyDown("a") || isKeyDown("s") || isKeyDown("d")) {
@@ -22,7 +26,7 @@ export function movementController(player) {
     if (isKeyDown("w") || isKeyDown("a") || isKeyDown("d")) {
       return;
     }
-    player.move(0, 150);
+    player.move(0, SPEED);
   });
   onKeyPress("s", () => {
     if (isKeyDown("w") || isKeyDown("a") || isKeyDown("d")) {
@@ -41,7 +45,7 @@ export function movementController(player) {
     if (isKeyDown("w") || isKeyDown("s") || isKeyDown("d")) {
       return;
     }
-    player.move(-150, 0);
+    player.move(-SPEED, 0);
     player.flipX = true;
   });
   onKeyPress("a", () => {
@@ -61,7 +65,7 @@ export function movementController(player) {
     if (isKeyDown("w") || isKeyDown("s") || isKeyDown("a")) {
       return;
     }
-    player.move(150, 0);
+    player.move(SPEED, 0);
     player.flipX = false;
   });
   onKeyPress("d", () => {

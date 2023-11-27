@@ -6,13 +6,14 @@ export function collisionController(player, openLinks) {
     const background = add([
       pos(width() / 2, height() - 80),
       anchor("center"),
-      rect(650, 80),
+      rect(600, 80, { radius: 20 }),
       color(30, 30, 30),
+      outline(2, Color.fromHex("FFFFFF")),
       opacity(0.75),
     ]);
     const text_text = add([
-      text(`My ${spot_name} Tabs... (Click E to Open)`, {
-        size: 30,
+      text(`My ${spot_name} Tabs... (Click E)`, {
+        size: 23,
       }),
       pos(width() / 2 + 30, height() - 80),
       anchor("center"),
@@ -21,7 +22,7 @@ export function collisionController(player, openLinks) {
       sprite("boy"),
       anchor("center"),
       scale(2),
-      pos(width() / 2 - 270, height() - 80),
+      pos(width() / 2 - 220, height() - 80),
     ]);
     const click = onKeyPress("e", () => {
       openLinks(spot_name);

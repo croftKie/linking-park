@@ -151,6 +151,17 @@ body {
 .link-container .links .link-cards .card .changes button:active {
   transform: scale(90%);
 }
+.link-container .links .link-cards .noLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.link-container .links .link-cards .noLinks p {
+  text-align: center;
+  width: 60%;
+}
 .link-container .submit-new {
   background-color: white;
   box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
