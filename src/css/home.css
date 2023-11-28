@@ -13,10 +13,9 @@ body {
 }
 
 button {
-  height: 40px;
+  height: 30px;
   outline: none;
-  box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
-  padding: 1% 3% 1% 3%;
+  padding: 0 3% 0 3%;
   border-radius: 5px;
   border: 2px solid black;
   box-shadow: 5px 5px 0 0 rgb(39, 39, 39);
@@ -33,28 +32,25 @@ button:active {
 }
 
 a {
-  height: 40px;
+  height: 30px;
   outline: none;
-  box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
-  padding: 1% 3% 1% 3%;
+  padding: 0 3% 0 3%;
   border-radius: 5px;
   border: 2px solid black;
   box-shadow: 5px 5px 0 0 rgb(39, 39, 39);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: black;
   border: 2px solid black;
-  box-shadow: 5px 5px 0 0 rgb(39, 39, 39);
 }
 a:hover {
   text-decoration: underline;
 }
 
 .login-button-state {
-  height: 40px;
+  height: 30px;
   outline: none;
-  box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
-  padding: 1% 3% 1% 3%;
+  padding: 0 3% 0 3%;
   border-radius: 5px;
   border: 2px solid black;
   box-shadow: 5px 5px 0 0 rgb(39, 39, 39);
@@ -66,10 +62,9 @@ a:hover {
 }
 
 .logout-button-state {
-  height: 40px;
+  height: 30px;
   outline: none;
-  box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
-  padding: 1% 3% 1% 3%;
+  padding: 0 3% 0 3%;
   border-radius: 5px;
   border: 2px solid black;
   box-shadow: 5px 5px 0 0 rgb(39, 39, 39);
@@ -86,7 +81,7 @@ a:hover {
 }
 .home nav {
   width: 100%;
-  padding: 1% 10% 1% 10%;
+  padding: 1% 3% 1% 3%;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -96,6 +91,7 @@ a:hover {
 .home nav .logo {
   flex: 1;
   display: flex;
+  align-items: center;
   gap: 4%;
 }
 .home nav .menu {
@@ -140,10 +136,9 @@ a:hover {
   padding-top: 5%;
 }
 .home .hero .text-content .buttons button {
-  height: 40px;
+  height: 30px;
   outline: none;
-  box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
-  padding: 1% 3% 1% 3%;
+  padding: 0 3% 0 3%;
   border-radius: 5px;
   border: 2px solid black;
   box-shadow: 5px 5px 0 0 rgb(39, 39, 39);
@@ -425,10 +420,9 @@ a:hover {
     gap: 10px;
   }
   .home nav .buttons button {
-    height: 40px;
+    height: 30px;
     outline: none;
-    box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
-    padding: 1% 3% 1% 3%;
+    padding: 0 3% 0 3%;
     border-radius: 5px;
     border: 2px solid black;
     box-shadow: 5px 5px 0 0 rgb(39, 39, 39);
@@ -460,10 +454,9 @@ a:hover {
     padding-top: 5%;
   }
   .home .hero .text-content .buttons button {
-    height: 40px;
+    height: 30px;
     outline: none;
-    box-shadow: 5px 5px 10px 2px rgba(158, 158, 158, 0.1);
-    padding: 1% 3% 1% 3%;
+    padding: 0 3% 0 3%;
     border-radius: 5px;
     border: 2px solid black;
     box-shadow: 5px 5px 0 0 rgb(39, 39, 39);

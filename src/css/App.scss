@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+$base-green: #92e3a9;
 
 body {
   overflow: hidden;
@@ -30,7 +31,7 @@ body {
       border-radius: 25%;
       border: none;
       outline: none;
-      background-color: #37e484;
+      background-color: $base-green;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -60,7 +61,7 @@ body {
   gap: 3%;
   box-sizing: border-box;
   .header {
-    background-color: #37e484;
+    background-color: $base-green;
     width: 60%;
     box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
@@ -101,7 +102,7 @@ body {
         }
       }
       .active {
-        background-color: #37e484;
+        background-color: $base-green;
       }
     }
     .link-cards {
@@ -187,7 +188,7 @@ body {
       outline: none;
       border: none;
       border-radius: 0 5px 5px 0;
-      background-color: #37e484;
+      background-color: $base-green;
       cursor: pointer;
       &:hover {
         transform: scale(105%);
@@ -215,7 +216,7 @@ body {
     flex-direction: column;
     align-items: center;
     .settings-container-nav {
-      background-color: #37e484;
+      background-color: $base-green;
       border-radius: 5px;
       box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
       width: 80%;
@@ -288,7 +289,7 @@ body {
           transition: 0.4s;
         }
         input:checked + .slider {
-          background-color: #2196f3;
+          background-color: $base-green;
         }
         input:focus + .slider {
           box-shadow: 0 0 1px #2196f3;
@@ -315,7 +316,7 @@ body {
     flex-direction: column;
     align-items: center;
     .user-container-nav {
-      background-color: #37e484;
+      background-color: $base-green;
       border-radius: 5px;
       box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
       width: 80%;
@@ -346,7 +347,7 @@ body {
           height: 25px;
         }
         &:hover {
-          background-color: #37e484;
+          background-color: $base-green;
           cursor: pointer;
         }
         &:nth-of-type(1) {

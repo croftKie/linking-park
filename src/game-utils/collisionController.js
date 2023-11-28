@@ -7,9 +7,9 @@ export function collisionController(player, openLinks) {
       pos(width() / 2, height() - 80),
       anchor("center"),
       rect(600, 80, { radius: 20 }),
-      color(30, 30, 30),
+      color(146, 227, 169),
       outline(2, Color.fromHex("FFFFFF")),
-      opacity(0.75),
+      opacity(1),
     ]);
     const text_text = add([
       text(`My ${spot_name} Tabs... (Click E)`, {
